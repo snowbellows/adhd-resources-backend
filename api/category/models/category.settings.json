@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tips": {
+      "via": "categories",
+      "private": true,
+      "collection": "tip"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true,
+      "private": false
+    }
+  }
+}
